@@ -16,7 +16,8 @@ if __name__ == '__main__':
 
     '''====================
     Use your own agent here.'''
-    from game2048.agents import ExpectiMaxAgent as TestAgent
+    from game2048.agents import myAgent as TestAgent
+    #from game2048.agents import ExpectiMaxAgent as TestAgent
     '''===================='''
 
     scores = []
@@ -24,5 +25,7 @@ if __name__ == '__main__':
         score = single_run(GAME_SIZE, SCORE_TO_WIN,
                            AgentClass=TestAgent)
         scores.append(score)
+
+
 
     print("Average scores: @%s times" % N_TESTS, sum(scores) / len(scores))
